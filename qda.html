@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/header.css">
+        <link rel="stylesheet" href="style/qda.css">
+        <script src="js/jquery3.6.0.min.js"></script>
+
+        <title>QUEDA DA ESTRELA</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="img/divinalogo.png" alt="Logo de Divina Valebat" class="logo_image">
+                <h2 class="logo">DIVINA VALEBAT</h2>
+                <nav>
+                    <a href="index.html">INICIO</a>
+                    <a href="temporadas.html">HISTORIAS</a>
+                    <a href="universo.html">UNIVERSO</a>
+                    <a href="sobre.html">SOBRE</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="episodios">
+                    <h1>EPISODIOS</h1>
+                    <div class="episodio">
+                        <p data-id="M5V_IXMewl4">Primeiro episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="HUgkvdjNERk">Episodio final</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="6sbRxUkoNH0">Episodio especial</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="video">
+                        <iframe width="100%" height="100%" id="video_id" src="https://www.youtube.com/embed/6sbRxUkoNH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            $(document).ready(function()
+            {
+                $(".episodio").click(function()
+                {
+                    let youtube_id = $(this).children("p").attr("data-id");
+                    let newUrl = `https://www.youtube.com/embed/${youtube_id}`;
+                    $("#video_id").attr("src", newUrl);
+                })
+            })
+        </script>
+    </body>
+</html>

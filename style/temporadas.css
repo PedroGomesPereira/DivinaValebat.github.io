@@ -1,0 +1,61 @@
+main
+{
+    background-color:#1a1a1a;
+}
+
+main .container
+{
+    margin: 0px 20px;
+}
+
+.temporadas
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.item
+{
+    padding: 10px;
+    height: 300px;
+    width: 100%;
+}
+
+.serie:hover
+{
+    background: linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.10)100%), url('../img/placeholder.jpg');
+    
+    border: solid;
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+    transition: .2s ease all;
+}
+
+.serie
+{
+    background: linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.30)100%), url('../img/placeholder.jpg');
+    height: 100%;
+    
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo
+{
+    font-size: 30px;
+}
+
+.botao
+{
+    color: white;
+    text-decoration: none;
+}

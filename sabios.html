@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/header.css">
+        <link rel="stylesheet" href="style/qda.css">
+        <script src="js/jquery3.6.0.min.js"></script>
+
+        <title>OS VII SABIOS</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="img/divinalogo.png" alt="Logo de Divina Valebat" class="logo_image">
+                <h2 class="logo">DIVINA VALEBAT</h2>
+                <nav>
+                    <a href="index.html">INICIO</a>
+                    <a href="temporadas.html">HISTORIAS</a>
+                    <a href="universo.html">UNIVERSO</a>
+                    <a href="sobre.html">SOBRE</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="episodios">
+                    <h1>EPISODIOS</h1>
+                    <div class="episodio">
+                        <p data-id="T9U9ona2zP8">1º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="GxUrAhPTy4Q">2º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="LT4fAxFHH6M">3º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="DNoN10KWl9Y">4º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="Cua2XX8DHIA">5º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="MLvVQ0E-YzY">6º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="WokeLSQhRiQ">7º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="PRfUXOMxk3U">8º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="wQrYIxl0tM4">9º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="urxy2G8x7LY">10º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="onKVVUUGotQ">11º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="dM3uQBnV8tk">12º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="C9xVnQbSTdw">13º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="z2ueX7qNUL0">14º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="asoRYDSHyHg">15º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="7QNUEY0_FVI">16º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="HX2f2uJuGsI">17º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="ab2RwhffPe0">18º episodio</p>
+                    </div>
+                    <div class="episodio">
+                        <p data-id="C1zwOIh8ilE">19º episodio (final)</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="video">
+                        <iframe width="100%" height="100%" id="video_id" src="https://www.youtube.com/embed/T9U9ona2zP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            $(document).ready(function()
+            {
+                $(".episodio").click(function()
+                {
+                    let youtube_id = $(this).children("p").attr("data-id");
+                    let newUrl = `https://www.youtube.com/embed/${youtube_id}`;
+                    $("#video_id").attr("src", newUrl);
+                })
+            })
+        </script>
+    </body>
+</html>
